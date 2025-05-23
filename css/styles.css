@@ -3,16 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+<<<<<<< HEAD
     font-size: 0.5rem;
+=======
+>>>>>>> 2e60856 (changed font size)
 }
 
 html, body {
     height: 100%;
     width: 100%;
+    font-size: 16px; /* Set base font size for rem units */
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 60px; /* Match actual header height for static viewing */
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -56,13 +60,15 @@ main {
     background: #004d40;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     z-index: 1000;
-    padding: 1rem 0 2rem;
+    padding: 0.5rem 0; /* Reduced bottom padding for static viewing */
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding:  1rem;
+    padding-bottom: 1rem;
+    padding-top: 0rem;
     max-width: 1640px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -78,8 +84,8 @@ main {
 }
 
 .site-logo img {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     object-fit: cover;
     border-radius: 8px;
     background: #fff;
@@ -87,7 +93,7 @@ main {
 }
 
 .site-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 1px;
@@ -292,7 +298,7 @@ main {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(1.8rem, 3vw, 1.2rem);
     font-weight: 900;
     margin-bottom: 1.2rem;
     letter-spacing: 2px;
@@ -1717,158 +1723,145 @@ main {
 .venue-card p,
 .contact-grid p,
 .registration-box p,
-.sponsors-box p {
-    font-size: 1.3rem !important;
+.sponsors-box p,
+.submission-list li,
+.team-list,
+.team-list li,
+.timeline-date,
+.timeline-content p,
+.general-instructions .submission-list li,
+.submission-box,
+.submission-box p,
+.contact-card p,
+.venue-card p,
+.note,
+.journal-list li {
+    font-size: 1.15rem !important;
 }
 
-/* Ensure track card headings are also updated */
-.track-card h3 {
-    font-size: 1.5rem !important;
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 992px) {
-    .about-container,
-    .publications-box,
-    .tracks-grid,
-    .venue-grid,
-    .contact-grid,
-    .submission-grid,
-    .registration-box,
-    .sponsors-box {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-/* Enhanced styling for .team-list in the committee section */
-.team-list {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,77,64,0.10);
-    padding: 2.5rem 2rem 2.5rem 2.5rem;
-    margin: 0 auto;
-    max-width: 1500px;
-    font-size: 1.3rem;
-    list-style: none;
-    line-height: 2.1;
-    border-left: 6px solid #ff9800;
-    position: relative;
-}
-.team-list li {
-    margin-bottom: 1.2rem;
-    padding-left: 1.5rem;
-    position: relative;
-    color: #004d40;
-    background: linear-gradient(90deg, #f8f9fa 80%, #fff 100%);
-    border-radius: 8px;
-    transition: background 0.2s, box-shadow 0.2s;
-}
+/* Main headings */
+.section-title,
+.about-header h2,
+.publication-content h3,
+.track-card h3,
+.venue-card h3,
+.contact-card h3,
+.submission-box h3,
+.general-instructions h3,
+.timeline-content h3,
 .team-list li strong {
-    color: #ff6600;
-    font-weight: 700;
-    margin-right: 0.5rem;
-    font-size: 1.15em;
-}
-.team-list li::before {
-    content: '\f0da'; /* FontAwesome chevron-right */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    color: #ff9800;
-    position: absolute;
-    left: 0;
-    top: 0.2em;
-    font-size: 1.1em;
-}
-.team-list li:hover {
-    background: #fffbe7;
-    box-shadow: 0 2px 12px rgba(255,152,0,0.08);
-}
-@media (max-width: 900px) {
-    .team-list {
-        padding: 1.2rem 0.7rem 1.2rem 1.2rem;
-        font-size: 1.08rem;
-    }
+    font-size: 1.35rem !important;
 }
 
-/* Responsive Header Styles */
+/* Remove duplicate .track-card h3 and .countdown-timer selectors */
+
 @media (max-width: 700px) {
+    .site-header {
+        padding: 0.5rem 0; /* Further reduce header height on mobile */
+    }
     .header-container {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 0.5rem;
-        padding: 0.7rem 0.7rem 0.7rem 0.7rem;
-    }
-    .site-logo {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.7rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Reduce vertical padding */
     }
     .site-logo img {
-        height: 48px;
-        width: 48px;
+        height: 40px;
+        width: 40px;
     }
     .site-title {
-        font-size: 1.1rem;
-        font-weight: 800;
-        color: #ffffff;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-        white-space: nowrap;
-    }
-    .main-nav {
-        display: none;
-    }
-    .hamburger {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 38px;
-        height: 38px;
-        cursor: pointer;
-        z-index: 1200;
-        margin-left: auto;
-    }
-    .hamburger span {
-        display: block;
-        width: 28px;
-        height: 4px;
-        background: #fff;
-        margin: 4px 0;
-        border-radius: 2px;
-        transition: all 0.3s;
-    }
-    .main-nav.active {
-        display: flex !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        background: #004d40;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.2rem 1.5rem 1.2rem 1.5rem;
-        box-shadow: 0 4px 18px rgba(0,0,0,0.13);
-        z-index: 1100;
-    }
-    .main-nav.active .nav-list {
-        flex-direction: column;
-        width: 100%;
-        gap: 0.7rem;
-    }
-    .main-nav.active .nav-link {
-        font-size: 1.1rem;
-        padding: 0.7rem 0.5rem;
-        width: 100%;
-        text-align: left;
-        border-radius: 6px;
+        font-size: 1rem;
     }
 }
 
-/* Hide hamburger by default, show only on small screens */
 .hamburger {
     display: none;
 }
+<<<<<<< HEAD
+=======
+
+/* Committee/Team List Styles */
+.team-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 2rem 0;
+}
+.team-list li {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,77,64,0.10);
+    border-left: 5px solid #ff9800;
+    padding: 1.5rem 2.2rem 1.5rem 2.7rem;
+    margin: 0;
+    font-size: 1.15rem;
+    color: #004d40;
+    font-weight: 600;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.team-list li::before {
+    content: '\f054'; /* FontAwesome chevron-right */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ff9800;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+}
+.team-list li strong {
+    font-size: 1.35rem !important;
+    color: #e55c00;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+.team-list li:hover {
+    box-shadow: 0 8px 28px rgba(255,152,0,0.13);
+    border-color: #e55c00;
+    transform: translateY(-4px) scale(1.03);
+}
+@media (max-width: 900px) {
+    .team-list {
+        gap: 1rem;
+    }
+    .team-list li {
+        min-width: 180px;
+        padding: 1.1rem 1.2rem 1.1rem 2.2rem;
+    }
+    .team-list li::before {
+        top: 1.1rem;
+    }
+}
+@media (max-width: 600px) {
+    .team-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+    }
+    .team-list li {
+        width: 98vw;
+        max-width: 98vw;
+        min-width: 0;
+        padding: 0.9rem 0.7rem 0.9rem 2rem;
+        font-size: 1rem;
+    }
+    .team-list li::before {
+        left: 0.7rem;
+        top: 0.9rem;
+        font-size: 1rem;
+    }
+}
+>>>>>>> 2e60856 (changed font size)
